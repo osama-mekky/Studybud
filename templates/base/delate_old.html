@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <h1>Are you Sure To dalate "{{obj}}"</h1>
+        <a href="{{request.META.HTTP_REFERER}}">Go Home</a>
+        <input type="submit" value="Delate" />
+
+    </form>
+</div>
+
+{% endblock %}
